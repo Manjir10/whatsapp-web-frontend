@@ -3,7 +3,8 @@ import ChatList from './components/ChatList';
 import ChatWindow from './components/ChatWindow';
 import { io } from 'socket.io-client';
 
-const API_BASE = 'http://localhost:5001';
+const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5001';
+
 
 // Stable per-tab id to ignore our own socket echo
 const CLIENT_ID = (() => {
