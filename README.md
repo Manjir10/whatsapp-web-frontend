@@ -19,6 +19,12 @@ React (Vite), Tailwind CSS, Socket.IO Client.
 ## Live URL
 Frontend: [https://whatsapp-web-frontend.onrender.com](https://whatsapp-web-frontend.onrender.com)
 
+## Related Links
+- **Backend Repo**: https://github.com/yourusername/whatsapp-web-backend
+- **Live Frontend**: https://whatsapp-web-frontend.onrender.com
+- **Live Backend API**: https://whatsapp-web-backend-2omx.onrender.com
+
+
 ## Local Setup
 ```bash
 git clone <repo-url>
