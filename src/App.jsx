@@ -1,9 +1,12 @@
+
+//// trigger redeploy
+
 import { useEffect, useMemo, useRef, useState } from 'react';
 import ChatList from './components/ChatList';
 import ChatWindow from './components/ChatWindow';
 import { io } from 'socket.io-client';
 
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5001';
+const API_BASE = 'https://whatsapp-web-backend-2omx.onrender.com'; // your backend URL (HTTPS)
 
 
 // Stable per-tab id to ignore our own socket echo
