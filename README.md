@@ -1,35 +1,30 @@
-# WhatsApp Web – Backend (Node.js + MongoDB + Socket.IO)
+
+---
+# WhatsApp Web – Frontend (React + Vite + Tailwind + Socket.IO)
 
 ## Overview
-A minimal backend that stores messages in MongoDB, serves chat/message data via REST APIs, and broadcasts live updates with Socket.IO. Built for the “WhatsApp Web Clone” task.
+A WhatsApp Web–style UI that lists conversations, shows message threads, sends messages, and updates in real-time via Socket.IO.
 
 ## Features
-- REST API:
-  - `GET /conversations` – last message per wa_id
-  - `GET /messages/:chatId` – full thread for a wa_id
-  - `POST /messages` – store message
-  - `POST /delivered`, `POST /read` – update message status
-  - `GET /health` – health check
-- Socket.IO events:
-  - `message:new` – new message broadcast
-  - `message:status` – status updates (sent/delivered/read)
+- Sidebar with chat list
+- Chat window with messages, timestamps, and status ticks
+- Emoji picker
+- New chat creation
+- Real-time status updates
+- Loads conversations and messages from backend API
 
 ## Tech Stack
-Node.js, Express, MongoDB (Mongoose), Socket.IO, ES Modules.
+React (Vite), Tailwind CSS, Socket.IO Client.
 
 ## Live URL
-Backend: [https://whatsapp-web-backend-2omx.onrender.com](https://whatsapp-web-backend-2omx.onrender.com)
+Frontend: [https://whatsapp-web-frontend.onrender.com](https://whatsapp-web-frontend.onrender.com)
 
 ## Local Setup
 ```bash
 git clone <repo-url>
-cd whatsapp-web-backend
-cp .env.example .env
+cd whatsapp-web-frontend
 npm install
-npm run dev   # or: node server.js
+npm run dev
 
-
-.env Example
-MONGODB_URI=mongodb+srv://<user>:<pass>@<cluster>/<db>?retryWrites=true&w=majority
-PORT=5001
-FRONTEND_ORIGIN=http://localhost:5173
+Configure Backend URL
+In src/App.jsx: const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5001';
